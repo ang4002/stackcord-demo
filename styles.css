@@ -143,14 +143,16 @@ nav {
   align-items: center;
 }
 
-/*server interface*/
-.server-interface {
+.main {
   width: 75vw;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
 }
+
+/*server interface (main menu)*/
 
 .search-bar {
   background: var(--secondaryBackgroundColor);
@@ -223,4 +225,85 @@ button {
 .question-content {
   font-size: calc(0.7em + 0.3vw);
   font-weight: lighter;
+  line-height: 1.5em;
+}
+
+/*chat interface*/
+.chat {
+  width: 75vw;
+  padding: 40px;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  position: relative;
+}
+
+.user-message {
+  width: 90%;
+}
+
+.message {
+  margin-right: auto;
+  width: 100%;
+}
+
+.message:not(:first-child) {
+  margin-top: 50px;
+}
+
+.message-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.message-timestamp {
+  color: var(--secondaryTextColor);
+}
+
+.message-question-title {
+  margin-top: 20px;
+}
+
+.message-question-image {
+  max-width: 50%;
+  margin-top: 10px;
+}
+
+.message-text {
+  margin-top: 10px;
+  font-size: calc(0.7em + 0.3vw);
+  line-height: 1.5em;
+}
+
+.message-input-bar {
+  background: var(--secondaryBackgroundColor);
+  border: 2px solid var(--borderColor);
+  height: 60px;
+  border-radius: 40px;
+  padding: 30px;
+  width: 92%;
+}
+
+.message-container:last-child {
+  margin-bottom: 60px;
+}
+
+.back-button {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  padding: 0;
+  margin-left: 20px;
+  background: var(--secondaryBackgroundColor);
+  border: 2px solid var(--borderColor);
+}
+
+.message-inputs {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  bottom: 20px;
+  width: calc(75vw - 40px);
 }
