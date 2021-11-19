@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--primaryTextColor);
+  font-family: var(--primaryFont);
+}
+
+@font-face {
+  font-family: "Uni Sans";
+  src: url("/fonts/Uni Sans Heavy.otf");
+}
+
+body {
+  background: var(--primaryBackgroundColor);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+:root {
+  --primaryBackgroundColor: #000;
+  --secondaryBackgroundColor: #212121;
+  --tertiaryBackgroundColor: #2e2e2e;
+  --borderColor: #383838;
+  --primaryColor: #3580d9;
+  --secondaryColor: #ed553b;
+  --primaryTextColor: #fff;
+  --secondaryTextColor: #a4a4a4;
+  --primaryFont: Inter, serif;
+  --secondaryFont: "Uni Sans", serif;
+}
