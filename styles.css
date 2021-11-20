@@ -166,6 +166,10 @@ nav {
   padding: 20px 30px;
 }
 
+.search-bar:focus {
+  border: 2px solid #4c4c4c;
+}
+
 .server-interface-buttons {
   display: flex;
   width: 90%;
@@ -193,6 +197,12 @@ button {
   background: var(--secondaryBackgroundColor);
   border-radius: 12px;
   border: 2px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.question:hover {
+  border: 2px solid #4c4c4c;
 }
 
 .answered-button {
@@ -289,6 +299,10 @@ button {
   width: calc(75vw - 40px);
 }
 
+.message-input-bar:focus {
+  border: 2px solid #4c4c4c;
+}
+
 .message-container:last-child {
   margin-bottom: 60px;
 }
@@ -303,6 +317,10 @@ button {
   right: calc(23vw + 25px);
   background: var(--secondaryBackgroundColor);
   border: 2px solid var(--borderColor);
+}
+
+.back-button:hover {
+  border: 2px solid #4c4c4c;
 }
 
 .message-input-bar-background {
