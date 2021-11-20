@@ -96,7 +96,7 @@ nav {
 .sidenav {
   float: right;
   height: calc(100vh - 100px);
-  width: 25vw;
+  width: 23vw;
   background: var(--secondaryBackgroundColor);
   border-left: 2px solid #383838;
   padding: 40px;
@@ -104,8 +104,9 @@ nav {
 
 .server-name {
   text-transform: uppercase;
-  font-size: calc(0.8em + 0.5vw);
+  font-size: calc(1em + 0.5vw);
   margin-bottom: 10px;
+  font-family: var(--secondaryFont);
 }
 
 .server-code {
@@ -117,6 +118,7 @@ nav {
   font-size: calc(0.7em + 0.3vw);
   text-transform: uppercase;
   margin-top: 45px;
+  font-family: var(--secondaryFont);
 }
 
 .member-avatar {
@@ -144,7 +146,7 @@ nav {
 }
 
 .main {
-  width: 75vw;
+  width: 77vw;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
@@ -161,7 +163,7 @@ nav {
   height: 60px;
   width: 90%;
   border-radius: 40px;
-  padding: 30px;
+  padding: 20px 30px;
 }
 
 .server-interface-buttons {
@@ -172,14 +174,15 @@ nav {
 
 .new-thread-button {
   margin-left: auto;
+  font-family: var(--secondaryFont);
 }
 
 button {
   background: var(--primaryColor);
-  padding: 12px 40px;
+  padding: 10px 30px;
   border: none;
   border-radius: 200px;
-  text-transform: uppercase;
+  font-weight: 1000;
 }
 
 .question {
@@ -207,13 +210,10 @@ button {
   background: var(--secondaryColor);
 }
 
-.question-text {
-  width: 55%;
-}
-
 .question-title {
   font-size: calc(1em + 0.3vw);
   margin-bottom: 10px;
+  font-weight: 1000;
 }
 
 .posted-by-status {
@@ -222,19 +222,22 @@ button {
   margin-bottom: 10px;
 }
 
-.question-content {
-  font-size: calc(0.7em + 0.3vw);
-  font-weight: lighter;
-  line-height: 1.5em;
+.question-description {
+  font-size: calc(0.7em + 0.25vw);
+  line-height: 1.7em;
+}
+
+.question-text {
+  width: 55%;
 }
 
 /*chat interface*/
 .chat {
-  width: 75vw;
+  width: 77vw;
   padding: 40px;
   height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
   align-items: center;
   overflow: scroll;
   position: relative;
@@ -274,7 +277,7 @@ button {
 .message-text {
   margin-top: 10px;
   font-size: calc(0.7em + 0.3vw);
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 .message-input-bar {
@@ -282,8 +285,8 @@ button {
   border: 2px solid var(--borderColor);
   height: 60px;
   border-radius: 40px;
-  padding: 30px;
-  width: 92%;
+  padding: 20px 30px;
+  width: calc(75vw - 40px);
 }
 
 .message-container:last-child {
@@ -291,19 +294,20 @@ button {
 }
 
 .back-button {
-  height: 64px;
-  width: 64px;
+  position: fixed;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   padding: 0;
-  margin-left: 20px;
+  top: 125px;
+  right: calc(23vw + 25px);
   background: var(--secondaryBackgroundColor);
   border: 2px solid var(--borderColor);
 }
 
-.message-inputs {
-  display: flex;
+.message-input-bar-background {
+  height: 80px;
   position: fixed;
-  align-items: center;
-  bottom: 20px;
-  width: calc(75vw - 40px);
+  background: black;
+  bottom: 0;
 }
