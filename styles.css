@@ -311,3 +311,62 @@ button {
   background: black;
   bottom: 0;
 }
+
+/*create a hall*/
+.create-a-hall {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background: var(--secondaryBackgroundColor);
+  position: relative;
+}
+
+.join-a-hall {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background: var(--secondaryBackgroundColor);
+  position: relative;
+}
+
+.hall-menu-title {
+  text-transform: uppercase;
+  font-family: var(--secondaryFont);
+  margin-top: 25px;
+  font-size: 3em;
+}
+
+.hall-input-bar {
+  margin-top: 25px;
+  background: var(--primaryBackgroundColor);
+  border: 2px solid var(--borderColor);
+  height: 60px;
+  border-radius: 40px;
+  padding: 20px 30px;
+  width: 35vw;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  margin-top: 25px;
+  margin-right: 25px;
+  height: 60px;
+  width: 60px;
+  background: var(--primaryBackgroundColor);
+  border: 2px solid var(--borderColor);
+  padding: 0;
+}
+
+.hall-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+}
