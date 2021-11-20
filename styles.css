@@ -1,3 +1,13 @@
+:root {
+  --blue: #2777ba;
+  --orange: #ed553b;
+  --grey: #212121;
+  --black: #000;
+}
+
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 main {
   overflow: scroll;
   max-height: 100vh;
@@ -10,7 +20,7 @@ nav {
   border-bottom: 2px solid #383838;
   padding: 15px 20px;
   display: flex;
-  overflow-y: scroll;
+  overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 .divider {
@@ -33,7 +43,14 @@ nav {
   background: var(--tertiaryBackgroundColor);
   border-radius: 12px;
   padding: 12px;
+  border: 0px solid var(--grey);
   margin-right: 30px;
+  transition: all ease-in-out 200ms;
+}
+
+.hall:hover {
+  border: 1px solid var(--blue);
+  transition: all ease-in-out 200ms;
 }
 
 .hall-info {
@@ -48,12 +65,14 @@ nav {
   float: left;
   height: 100%;
   width: 45px;
-  background: green;
+  background-image: linear-gradient(45deg, var(--blue), var(--orange));
   border-radius: 12px;
+  margin-right: 1vh;
 }
 
 .hall-name {
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .student-count {
@@ -144,12 +163,13 @@ nav {
 }
 
 .main {
-  width: 75vw;
+  /* width: 75vw; this was fuking everything*/
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: scroll;
+  overflow-x: hidden; /* Hide vertical scrollbar */
 }
 
 /*server interface (main menu)*/
@@ -183,13 +203,19 @@ button {
 }
 
 .question {
-  margin-top: 25px;
+  margin-top: 25px; /* this shit is doing a fuky wuky */
   display: flex;
   width: 90%;
   padding: 20px;
   background: var(--secondaryBackgroundColor);
   border-radius: 12px;
   border: 2px solid var(--borderColor);
+  opacity: 0.7;
+  transition: all ease-in-out 200ms;
+}
+.question:hover {
+  opacity: 1;
+  transition: all ease-in-out 200ms;
 }
 
 .answered-button {
@@ -205,6 +231,12 @@ button {
 
 .new-thread-button {
   background: var(--secondaryColor);
+  opacity: 1;
+  transition: all ease-in-out 200ms;
+}
+.new-thread-button:hover {
+  opacity: 0.7;
+  transition: all ease-in-out 200ms;
 }
 
 .question-text {
@@ -230,14 +262,14 @@ button {
 
 /*chat interface*/
 .chat {
-  width: 75vw;
+  width: 20%;
   padding: 40px;
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: scroll;
-  position: relative;
+  position: absolute;
 }
 
 .user-message {
@@ -306,4 +338,33 @@ button {
   align-items: center;
   bottom: 20px;
   width: calc(75vw - 40px);
+}
+.icon-settings {
+  padding-left: 1vh;
+  width: fit-content;
+  filter: invert(100%);
+  transition: all ease-in-out 200ms;
+}
+.icon-settings:hover {
+  filter: invert(70%);
+  transition: all ease-in-out 400ms;
+}
+.icon-add {
+  width: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2vh;
+  margin-right: 2vh;
+  filter: invert(100%);
+  border: 60px #646464;
+  border-radius: 12px;
+  transition: all ease-in-out 200ms;
+}
+.icon-add:hover {
+  transform: rotateZ(90deg);
+  transition: all ease-in-out 400ms;
+}
+
+.icon-send {
+  filter: invert(100%);
 }
